@@ -104,13 +104,13 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
+                    <span>Perpustakaan</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Login Screens:</h6>
                         <a class="collapse-item" href="{{url ('login')}}">Login</a>
-                        <a class="collapse-item" href="{{url ('kategori')}}">Kategori</a>
+                        <a class="collapse-item" href="{{url ('kategori')}}">Data Kategori</a>
                         <a class="collapse-item" href="{{url ('buku')}}">Data Buku</a>
                         <a class="collapse-item" href="{{url ('peminjaman')}}">Data Peminjaman</a>
                         <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
@@ -332,7 +332,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Nida Amelia</span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>
