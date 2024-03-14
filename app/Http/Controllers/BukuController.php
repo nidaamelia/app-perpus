@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Buku;
 use App\Models\Kategori;
+use App\Models\Buku;
 use App\Models\Kategoribukurelasi;
 use Illuminate\Http\Request;
 
@@ -31,8 +31,8 @@ class BukuController extends Controller
             'tahun_terbit' => 'required|integer',
             'kategori_id' => 'required',
         ]);
-        $fotoPath = $request->file('foto')->store('buku_images', 'public');
 
+        $fotoPath =$request->file('foto')->store('buku_images', 'public');
           // Cari kategori berdasarkan ID
         $kategori = Kategori::find($request->kategori_id);
  
@@ -74,5 +74,15 @@ class BukuController extends Controller
         $buku->delete();
 
         return redirect('/buku');
+    }
+
+    public function welcome(){
+        $buku = Buku::all();
+        return view('welcome', ['buku' => $buku]);
+    }
+
+    public function detail($id){
+        $buku = Buku::find($id);
+        return view('buku.detail', ['buku' => $buku]);
     }
 }

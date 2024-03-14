@@ -42,8 +42,14 @@
                                                 <input type="number" name="tahun_terbit" value="{{$buku->tahun_terbit}}"class="w-full border p-2"
                                                     required>
                                             </div>
+                                            <div class="mb-4">
+                                                <label for="foto" class="form-label">Foto Buku:</label>
+                                                <input type="file" name="foto" accept="image/*" class="form-control" >
+                                            </div>
                                             <button type="submit" class="btn btn-success">Simpan</button>
                                         </form>
+
+                                        
                     </div>
                 </div>
             </div>
