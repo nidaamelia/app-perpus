@@ -20,12 +20,12 @@ Route::get('/', [BukuController ::class, 'welcome']);
 Route::get('dashboard', function (){
     return view('dashboard');
 })->middleware(['auth','verified'])->name('dashboard');
-Route::get('/buku/detail/{id}', [BukuController::class, 'detail'])->name('detail');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware(['auth', 'verified'])->name('home');
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware(['auth', 'verified'])->name('home');
+    Route::get('/buku/detail/{id}', [BukuController::class, 'detail'])->name('detail');
 
 
-Route::middleware(['auth', 'role:admin'])->group(function (){
-   
+//admin
+Route::middleware(['auth', 'role:admin'])->group(function (){ 
     Route::get('/kategori', [KategoriController::class, 'index']);
     Route::get('/kategori/tambah', [KategoriController::class, 'create'])->name('kategori.create');
     Route::post('/kategori/store', [KategoriController::class, 'store'])->name('kategori.store');
@@ -37,7 +37,7 @@ Route::middleware(['auth', 'role:admin'])->group(function (){
     Route::post('/buku/store', [BukuController::class, 'store'])->name('buku.store');
     Route::delete('/buku/hapus/{id}', [BukuController::class, 'destroy'])->name('buku.destroy');
     Route::get('/buku/edit/{id}', [BukuController::class, 'edit'])->name('buku.edit'); 
-    Route::patch('/buku/update/{id}', [BukuController::class, 'update'])->name('buku.update'); 
+    Route::put('/buku/update/{id}', [BukuController::class, 'update'])->name('buku.update'); 
     Route::get('/peminjaman', [PeminjamanController::class, 'index'])->name('peminjaman.index');
     Route::get('/peminjaman/tambah', [PeminjamanController::class, 'tambahPeminjaman'])->name('peminjaman.tambah');
     Route::post('/peminjaman/store', [PeminjamanController::class, 'storePeminjaman'])->name('peminjaman.store');
