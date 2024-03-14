@@ -11,7 +11,7 @@
                                 <th class="py-2 px-4">Penulis</th>
                                 <th class="py-2 px-4">Penerbit</th>
                                 <th class="py-2 px-4">Tahun Terbit</th>
-                                <th class="py-2 px-4">Aksi</th>
+                                <th class="py-2 px-4">Aksii</th>
                             </tr>
                         </thead>
                         <tbody>
